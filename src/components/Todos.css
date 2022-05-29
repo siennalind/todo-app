@@ -1,0 +1,32 @@
+li {
+    line-height: 1.6;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem 0;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0.25rem;
+    border-bottom: 1px solid black;
+}
+
+.todo__text {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.delete__btn {
+    font-size: 1.5rem;
+    min-width: 32px;
+    min-height: 32px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: hsl(350, 78%, 46%);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    float: right;
+  }
+
+.done {
+    text-decoration: line-through;
+}

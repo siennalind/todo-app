@@ -1,32 +1,33 @@
-import Header from "./Header";
-import CompleteButton from "./CompleteButton";
-import DeleteButton from "./DeleteButton";
-import AddTodo from "./AddTodo";
+import './Todos.css'
+import { useState } from 'react';
 
-function Todos() {
+function Todos(props) {
+    const [ completed, setCompleted ] = useState(false);
+
+    const completeHandler = () => {
+        setCompleted(!completed);
+    }
+
+    const toBeDeleted = (id) => {
+        props.deleteItemHandler(id);
+    }
 
     return (
-    <>
-    <Header />
-    <main>
-    {DUMMY_DATA.map((item, index) =>
-    <li key={index}>
-    { item.text }
-    <div
-    className="listBtns">
-    <CompleteButton />
-    <DeleteButton />
-    </div>
-    </li>)}
-    <AddTodo />
-    </main>
-    </>
+    <li 
+    key={props.id}
+    >
+    <span
+    tabIndex="0"
+    className={completed ? "todo__text done" : "todo__text"}
+    onKeyPress={completeHandler}
+    onClick={completeHandler}>
+    {props.text}
+    </span>
+    <button
+    className="delete__btn"
+    onClick={toBeDeleted}
+    >x</button>
+    </li>
     )}
-
-    const DUMMY_DATA = [
-        { text: "Example 1" },
-        { text: "Another to do example" },
-        { text: "A third to do example" }
-    ];
 
 export default Todos;

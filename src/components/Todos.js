@@ -16,17 +16,20 @@ function Todos(props) {
     <li 
     key={props.id}
     >
-    <span
+    <span 
     tabIndex="0"
-    className={completed ? "todo__text done" : "todo__text"}
+    className="material-symbols-outlined complete__btn"
     onKeyPress={completeHandler}
-    onClick={completeHandler}>
+    onClick={completeHandler}>done</span>
+    <p
+    className={completed ? " done" : ""}>
     {props.text}
-    </span>
-    <button
-    className="delete__btn"
-    onClick={toBeDeleted}
-    >x</button>
+    </p>
+    <span 
+    tabIndex="0"
+    className="material-symbols-outlined delete__btn"
+    onKeyPress={toBeDeleted}
+    onClick={toBeDeleted}>delete</span>
     </li>
     )}
 

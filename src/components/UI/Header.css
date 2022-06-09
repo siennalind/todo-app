@@ -1,9 +1,11 @@
 header {
     padding: 1rem;
-    color: whitesmoke;
+    color: hsl(0, 0%, 96%);
+    text-shadow: 2px 2px 2px hsl(0, 0%, 30%);
+    text-align: center;
   }
   
   h1 {
-    font-size: 2rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(3rem, 0rem + 6.8vw, 6rem);
+    font-family: 'Lobster Two', cursive;
   }

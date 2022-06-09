@@ -1,30 +1,47 @@
 li {
-    line-height: 1.6;
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 0.25rem 0;
     justify-content: space-between;
-    flex: 1;
-    padding: 0.25rem;
-    border-bottom: 1px solid black;
+    gap: 0.5rem;
+    margin: 0.5rem auto;
+    background-color: hsl(0, 0%, 96%);
+    box-shadow: 3px 3px 5px hsl(0, 0%, 30%);
+    height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-.todo__text {
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100%;
+    font-size: clamp(1.25rem, 0.9667rem + 0.6095vw, 1.75rem);
+    flex: 1;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+span {
+    height: 100%;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 95%);
+    font-size: clamp(1.25rem, 0.9667rem + 0.6095vw, 1.75rem);
+    padding: 0.5rem;
+}
+
+span:hover {
+    opacity: 0.75;
+}
+
+span:active {
+    opacity: 0.5;
+}
+
+.complete__btn {
+    background-color: hsl(145, 90%, 40%);
 }
 
 .delete__btn {
-    font-size: 1.5rem;
-    min-width: 32px;
-    min-height: 32px;
-    font-weight: bold;
-    border-radius: 4px;
-    background-color: hsl(350, 78%, 46%);
-    color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
-    float: right;
+    background-color: hsl(340, 78%, 46%);
   }
 
 .done {

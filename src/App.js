@@ -3,7 +3,6 @@ import TodoList from './components/TodoList';
 import AddItemForm from './components/AddItemForm';
 import Header from './components/UI/Header';
 import { useState } from 'react';
-import './components/UI/media-query.css';
 
 function App() {
   const [ todos, setTodos ] = useState([]);
